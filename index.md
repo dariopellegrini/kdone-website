@@ -1,37 +1,75 @@
-## Welcome to GitHub Pages
+# Welcome to KDone website
 
-You can use the [editor on GitHub](https://github.com/dariopellegrini/kdone-website/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+KDone is a configurator to implement RESTful API very easily. It is on top of Ktor framework and uses its core principles like functional programming and DSL.
 
-### Markdown
+KDone supports at the moment only MongoDB and JWT token authentication.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Getting started
+### Installation
+KDone can be installed using Gradle.
 
-```markdown
-Syntax highlighted code block
+First add nitpick to Gradle repositories
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```groovy
+repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Then import KDone dependency
+```groovy
+implementation 'com.github.dariopellegrini:KDone:v0.5.1'
+```
 
-### Jekyll Themes
+### Configuration
+ The simplest KDone configuration needs a model to represent database data. It is suggested that this model inherits from Identifiable class, in order to have automatically managed MongoDB _id property.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dariopellegrini/kdone-website/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```kotlin
+data class Game(
+    val name: String,
+    val players: Int?): Identifiable()
+```
 
-### Support or Contact
+Then using DSL the configuration of CRUD API is pretty straight forward.  
+In main, call startKDone function, passing as arguments the desired port, mongo URL and a configuration for JWT with the secret used for token signature.  
+Finally with DSL approach declare a module with the desired model class and its endpoint.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```kotlin
+startKDone(
+        port = 23146,
+        mongoURL = "mongodb://localhost:27017/games",
+        jwtConfig = JWTConfig(JWT.secret)) {
+
+   module<Game>("games")
+
+}
+```
+
+This configuration will give CRUD API at "games" endpoint
+
+- POST http://localhost:23146/games performs creation of a new game
+- GET http://localhost:23146/games returns the list of all games
+- GET http://localhost:23146/games/:id returns the game with the specified id
+- PATCH http://localhost:23146/games/:id performs an update on the game with the specified id
+- DELETE http://localhost:23146/games/:id deletes the game with the specified id
+
+### Alternative starting methods
+Instead that specify MongoDB URL in `startKDone`function, another way to start KDone is to use
+MongoDatabase instance from KMongo library. KDone uses KMongo as MongoDB driver.
+```kotlin
+val mongoDatabase = KMongo.createClient().getDatabase("database")
+startKDone(
+   port = System.getenv("PORT")?.toInt() ?: 23146,
+   mongoDatabase = mongoDatabase,
+   jwtConfig = JWTConfig(JWT.secret)) {
+}
+```
+Since KDone uses Ktor, it is possible to start KDone inside a Ktor configuration through `installKDone` function.
+```kotlin
+embeddedServer(Netty, port) {
+   installKDone(mongoURL, jwtConfig) {
+   }
+}.start(wait = true)
+```
