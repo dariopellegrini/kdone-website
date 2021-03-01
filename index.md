@@ -1,3 +1,7 @@
+layout: welcome
+title: "KDone website"
+permalink: /
+
 # Welcome to KDone website
 
 
