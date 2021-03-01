@@ -1,6 +1,9 @@
-layout: welcome
+---
+layout: page
 title: "KDone website"
 permalink: /
+
+---
 
 # Welcome to KDone website
 
