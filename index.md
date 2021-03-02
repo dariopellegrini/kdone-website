@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: KDone
 nav_order: 1
 description: "Welcome in KDone"
 permalink: /
