@@ -1,2 +1,2 @@
-theme: jekyll-theme-cayman
-footer_content: "Copyright 2021 Dario Pellegrini"
+# theme: jekyll-theme-cayman
+remote_theme: pmarsceill/just-the-docs
