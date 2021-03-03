@@ -5,6 +5,8 @@ parent: Users
 nav_order: 5
 ---
 
+# E-mail confirmation
+
 KDone supports e-mail confirmation process after sign up. If configured, an e-mail is sent to user after sign up.
 This e-mail contains a link that confirms users' e-mail.
 
