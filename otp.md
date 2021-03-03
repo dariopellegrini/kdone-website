@@ -50,7 +50,7 @@ otp(otpSender,
 )
 ```
 
-If not specified a codeGenerator function, KDone will generate a 5 characters random string as OTP code.
+If a codeGenerator function is not specified , KDone will generate a 5 characters random string as OTP code.
 
 ### E-mail sender
 KDone has a build in Email sender to send OTP codes through e-mail. It takes as arguments a [SMTP Client](https://dariopellegrini.github.io/kdone-website/email_confirmation.html#stmp-client), sender info of the sent e-mail, object of the message and a closure to compose and send the e-mail content using generated OTP code.
