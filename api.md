@@ -6,6 +6,3 @@ has_children: true
 ---
 
 # API
-
-* [Creation API](/creation)
-* [Read API](/read)
