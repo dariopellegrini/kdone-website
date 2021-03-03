@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Transfer Object (DTO)
-nav_order: 6
+nav_order: 8
 ---
 
 # Data Transfer Object (DTO)
