@@ -1,11 +1,11 @@
 ---
 layout: default
-title: One Time Password
+title: One-time password
 parent: Users
 nav_order: 7
 ---
 
-# One Time Password
+# One-time password
 
 KDone supports OTP (One-time password).
 
