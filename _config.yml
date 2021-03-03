@@ -4,7 +4,7 @@ remote_theme: pmarsceill/just-the-docs
 
 # Aux links for the upper right navigation
 aux_links:
-  "Kdone on GitHub":
+  "KDone on GitHub":
   - https://github.com/dariopellegrini/KDone
 
 # Makes Aux links open in a new tab. Default is false
