@@ -17,7 +17,7 @@ KDone supports at the moment only MongoDB and JWT token authentication.
 ### Installation
 KDone can be installed using Gradle.
 
-First add nitpick to Gradle repositories
+First add jitpack to Gradle repositories
 
 ```groovy
 repositories {
