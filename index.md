@@ -57,11 +57,11 @@ startKDone(
 
 This configuration will give CRUD API at `games` endpoint
 
-- POST http://localhost:23146/games performs creation of a new game
-- GET http://localhost:23146/games returns the list of all games
-- GET http://localhost:23146/games/:id returns the game with the specified id
-- PATCH http://localhost:23146/games/:id performs an update on the game with the specified id
-- DELETE http://localhost:23146/games/:id deletes the game with the specified id
+- POST `http://localhost:23146/games` performs creation of a new game
+- GET `http://localhost:23146/games` returns the list of all games
+- GET `http://localhost:23146/games/:id` returns the game with the specified id
+- PATCH `http://localhost:23146/games/:id` performs an update on the game with the specified id
+- DELETE `http://localhost:23146/games/:id` deletes the game with the specified id
 
 ### Alternative starting methods
 Instead that specify MongoDB URL in `startKDone` function, another way to start KDone is to use
