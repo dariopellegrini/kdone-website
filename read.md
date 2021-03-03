@@ -1,3 +1,10 @@
+---
+layout: default
+title: Read API
+parent: API
+nav_order: 2
+---
+
 # Read API
 
 Once configured a module for a model, GET API will be available via http requests.
