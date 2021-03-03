@@ -1,3 +1,12 @@
+---
+layout: default
+title: E-mail confirmation
+parent: Users
+nav_order: 6
+---
+
+# Password recovery
+
 Similarly to [E-mail confirmation](email_confirmation.md), KDone supports password recovery.
 
 The logic is pretty straight forward.
