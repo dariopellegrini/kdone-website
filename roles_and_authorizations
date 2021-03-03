@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Roles and Authorizations
-nav_order: 3
-has_children: true
+parent: Users
+nav_order: 2
 ---
 
 # Roles and Authorizations
