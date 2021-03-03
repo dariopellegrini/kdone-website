@@ -1,6 +1,6 @@
 ---
 layout: default
-title: E-mail confirmation
+title: Password recovery
 parent: Users
 nav_order: 6
 ---
