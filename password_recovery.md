@@ -34,7 +34,7 @@ Password recovery configuration takes as parameters
 - SMTP client
 - Base URL of web server
 - Redirect URL, to which user will be redirect to (optional)
-- E-mail format configuration function, that lets to specify an e-mail format that use password recovery link provided by KDone.
+- E-mail format configuration function, that lets to specify an e-mail format that uses password recovery link provided by KDone.
 
 This configuration will open `users/password/recovery` POST endpoint, which needs a body containing user's e-mail and a new password.  
 ```json
