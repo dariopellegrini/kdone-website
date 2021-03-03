@@ -2,7 +2,7 @@
 layout: default
 title: Privacy preferences
 parent: Users
-nav_order: 1
+nav_order: 8
 ---
 
 # Privacy preferences
