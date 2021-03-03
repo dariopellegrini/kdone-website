@@ -1,3 +1,10 @@
+---
+layout: default
+title: Creation API
+parent: API
+nav_order: 1
+---
+
 # Creation API
 
 Once configured a module for a model, POST API will be available via http requests.
