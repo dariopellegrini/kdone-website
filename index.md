@@ -8,8 +8,6 @@ permalink: /
 
 
 # Welcome to KDone website
-<script> const toggleDarkMode = document.querySelector('.js-toggle-dark-mode'); jtd.addEvent(toggleDarkMode, 'click', function(){ if (jtd.getTheme() === 'dark') { jtd.setTheme('light'); toggleDarkMode.textContent = 'Darke'; } else { jtd.setTheme('dark'); toggleDarkMode.textContent = 'Light'; } }); </script>
-See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
 
 KDone is a configurator to implement RESTful API very easily. It is on top of Ktor framework and uses its core principles like functional programming and DSL.
 
