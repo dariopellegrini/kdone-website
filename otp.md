@@ -54,8 +54,9 @@ If not specified a codeGenerator function, KDone will generate a 5 characters ra
 
 ### E-mail sender
 KDone has a build in Email sender to send OTP codes through e-mail. It takes as arguments a [SMTP Client](https://dariopellegrini.github.io/kdone-website/email_confirmation.html#stmp-client), sender info of the sent e-mail, object of the message and a closure to compose and send the e-mail content using generated OTP code.
+
 ```kotlin
-val otpSender = EmailSender<User>(smtpClient, "Info" to "info2@s4win.com", "One Time Password") {
+val otpSender = EmailSender<User>(smtpClient, "Info" to "info@company.com", "One Time Password") {
                     code ->
                 """
                     Il codice di conferma per accedere è
