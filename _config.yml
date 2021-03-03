@@ -11,3 +11,5 @@ aux_links:
 aux_links_new_tab: false
 
 gh_edit_link: false
+
+footer_content: "Copyright &copy; 2021 Dario Pellegrini"
