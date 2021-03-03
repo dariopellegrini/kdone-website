@@ -43,7 +43,7 @@ emailConfirmation(
 ```
 
 This configuration will send an e-mail after user sign up, using username as e-mail address.
-The e-mail will contain a link like `https://site.com/users/auth/veryfy/<code>`, that, when open, will confirm user's e-mail address.
+The e-mail will contain a link like `https://site.com/users/auth/veryfy/<code>`, that, when opened, will confirm user's e-mail address.
 
 By default e-mail confirmation is not mandatory in order to let users perform login. It can be configured as mandatory in userModule DSL.
 
