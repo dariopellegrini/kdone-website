@@ -11,8 +11,6 @@ permalink: /
 
 KDone is a configurator to implement RESTful API very easily. It is on top of Ktor framework and uses its core principles like functional programming and DSL.
 
-KDone supports at the moment only MongoDB and JWT token authentication.
-
 ## Getting started
 ### Installation
 KDone can be installed using Gradle.
@@ -81,3 +79,6 @@ embeddedServer(Netty, port) {
    }
 }.start(wait = true)
 ```
+
+### Support
+KDone supports at the moment only MongoDB and JWT token authentication.
