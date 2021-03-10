@@ -6,15 +6,14 @@ description: "Welcome in KDone"
 permalink: /
 ---
 
-
 # Welcome to KDone website
 KDone is a configurator that lets to implement RESTful API very easily. It is on top of Ktor framework and uses its core principles like functional programming and DSL.
 
 ## Getting started
 ### Installation
 KDone can be installed using Gradle.
-1. First add jitpack to Gradle repositories.
-2. Then import KDone dependency
+1. Add jitpack to Gradle repositories.
+2. Import KDone dependency.
 
 **Kotlin**
 ```kotlin
