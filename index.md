@@ -13,18 +13,32 @@ KDone is a configurator that lets to implement RESTful API very easily. It is on
 ## Getting started
 ### Installation
 KDone can be installed using Gradle.
+1. First add jitpack to Gradle repositories.
+2. Then import KDone dependency
 
-First add jitpack to Gradle repositories
+**Kotlin**
+```kotlin
+// 1
+repositories {
+        ...
+        maven("https://jitpack.io")
+     }
+```
+```kotlin
+// 2
+implementation("com.github.dariopellegrini:KDone:v0.6.11")
+```
 
+**Groovy**
 ```groovy
+// 1
 repositories {
         ...
         maven { url 'https://jitpack.io' }
     }
 ```
-
-Then import KDone dependency
 ```groovy
+// 2
 implementation 'com.github.dariopellegrini:KDone:v0.6.11'
 ```
 
