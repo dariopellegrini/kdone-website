@@ -25,7 +25,7 @@ repositories {
 
 Then import KDone dependency
 ```groovy
-implementation 'com.github.dariopellegrini:KDone:v0.5.1'
+implementation 'com.github.dariopellegrini:KDone:v0.6.11'
 ```
 
 ### Configuration
