@@ -6,8 +6,8 @@ nav_order:9
 
 # Localization
 
-Localized content can be added to every model using `Localized<T>` class, which takes as generic the class that should been localized.
-Giving a model attribute `Localized<T>` type, turns that attribute in a map with languages's codes as keys and values the corresponded translated values.
+Localized content can be added to every model using `Localized<T>` class, which takes as generic the class that should be localized.
+Giving a model attribute `Localized<T>` type turns that attribute in a map with languages' codes as keys and values the corresponded translated values.
 
 Let's see an example.
 
