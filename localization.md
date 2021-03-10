@@ -63,5 +63,5 @@ Then if read API request has `Accept-Language` header with one of the available 
   }
 ```
 
-If `Accept-Language` value is not present in the localized object, the response will contain the English (`en`) value.
+If `Accept-Language` value is not present in the localized object, the response will contain the English (`en`) value.  
 If the English value is not present, the response will contain the first available value.
