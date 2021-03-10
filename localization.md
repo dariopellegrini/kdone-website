@@ -21,7 +21,7 @@ can be localized turning `String` into `Localized<String>`
 class Book(val name: Localized<String>)
 ```
 
-After that the creation API will take a body with name as a localized object.
+After that the creation API will take a body with `name` as a localized object.
 ```json
 {
    "name": {
