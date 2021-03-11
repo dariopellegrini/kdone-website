@@ -15,7 +15,7 @@ KDone can be installed using Gradle.
 1. Add jitpack to Gradle repositories.
 2. Import KDone dependency.
 
- #### Kotlin
+Kotlin
 ```kotlin
 // 1
 repositories {
@@ -28,7 +28,7 @@ repositories {
 implementation("com.github.dariopellegrini:KDone:v0.6.11")
 ```
 
-#### Groovy
+Groovy
 ```groovy
 // 1
 repositories {
