@@ -106,7 +106,7 @@ data class Game(val name: String, val platformId: Id<Platform>)
 data class Platform(val name: String, val brand: String): Identifiable()
 ```
 
-The JSON result
+The JSON result of the document
 ```json
 {
   "name": "Days Gone",
@@ -151,5 +151,8 @@ module<Game>("games") {
      ...
      
      autolookup = true
+     
+     ...
+     
 }
 ```
