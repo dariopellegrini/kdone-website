@@ -32,7 +32,7 @@ otp(senderSMS, senderEmail)
 ### Endpoint
 After this configuration, OTP endpoints will be opened.
 
-* `users/otp/access`, POST which takes as input user's parameters (JSON or Multipart Form Data). This endpoint will create the user if not already exists and send the OTP access code though the senders specified in OTP configuration.
+* `users/otp/access`, POST which takes as input user's parameters (JSON or Multipart Form Data). This endpoint will create the user if not already exists and send the OTP access code through the senders specified in OTP configuration.
 * `users/otp/access/registered`, POST which sends the OTP through senders and requires a JSON body with username value. If username does not exists returns an error.
 * `users/otp/login`, POST which let users login using username and OTP code. They should be sent in a JSON inside request's body.
 ```json
