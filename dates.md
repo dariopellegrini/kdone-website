@@ -21,5 +21,5 @@ data class Game(
 }
 ```
 
-After every creation, `dateCreated`will be assign with current date.
-After every update, `dateUpdated` will be updated with current date.
+After every creation, `dateCreated` will be assigned with the current date.
+After every update, `dateUpdated` will be updated with the current date.
