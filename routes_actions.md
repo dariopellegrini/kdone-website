@@ -7,7 +7,7 @@ nav_order: 7
 # Routes actions
 
 Inside modules' it's possible to add configurations that aim to execute code in relation to API calls.
-It's like hooks of code that are executed before and after each API execution. They are useful to perform input check or actions after API calls, like sending an e-mail or a push notification after a creation.
+It's like hooks of code that are executed before and after each API execution. They are useful to perform input checks or actions after API calls, like sending an e-mail or a push notification after a creation.
 
 ```kotlin
 module<Game>("games") {
@@ -47,7 +47,7 @@ module<Game>("games") {
 }
 ```
 
-For `userModule` 2 more actions are available, in order to support login and logout
+For `userModule` 2 more actions are available, to support login and logout
 ```kotlin
 userModule<User> {
 
