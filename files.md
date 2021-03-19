@@ -6,7 +6,7 @@ nav_order: 4
 
 # Files
 
-KDone can manage files. In order to do that, 2 things are needed:
+KDone can manage files. To do that, 2 things are needed:
 
 * Specify a `ResourceFile` in the model
 * Configure an uploader in module configuration
@@ -26,10 +26,10 @@ module<Game>("games") {
 }
 ```
 
-In this case `fileUploader` is a custom class that implements `Uploader` interface.  
+In this case, `fileUploader` is a custom class that implements `Uploader` interface.  
 This interface has 2 methods
 1. `suspend fun save(modelName: String, fileName: String, file: File, contentType: String): String?`  
-It is intended to add to the storage the uploaded file and it gets as input document's model name, file name, actual `File` object and content-type. As return value it should have the file string URL.
+It is intended to add to the storage the uploaded file and it gets as input document's model name, file name, actual `File` object and content-type. As return value, it should have the file string URL.
 2. `suspend fun delete(url: String)`  
 It gets as input the file url and it is intended to delete that file to the storage.
 
