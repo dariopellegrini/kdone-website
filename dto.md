@@ -6,7 +6,7 @@ nav_order: 8
 
 # Data Transfer Object (DTO)
 
-KDone supports DTO pattern, that allows to control API's input and output data. It is possible to specify output model of read operations and input model of create and update operations.
+KDone supports DTO pattern, which allows controlling API's input and output data. It is possible to specify the output model of reading operations and the input model of creating and update operations.
 To configure DTO, add `dto` inside `module` configuration DSL
 
 ```kotlin
@@ -43,7 +43,7 @@ If we call a GET API, the result will be
 
 Now we would like to specify a custom model for GET APIs, different from the previous one, such as the output has only `name` and `players` parameters.
 
-This can be achieved configuring KDone DTO.
+This can be achieved by configuring KDone DTO.
 
 First create the desired model
 
@@ -61,7 +61,7 @@ dto {
    }
 ```
 
-Inside `read` DSL is specified the rule used to go from `Game` to `GameOutput`. It is possible to omit the rule and KDone will make the transfer automatically, using the classes attributes' name.
+Inside `read` DSL is specified the rule used to go from `Game` to `GameOutput`. It is possible to omit the rule and KDone will make the transfer automatically, using the class attributes' name.
 ```kotlin
 dto {
    read<GameOutput>()
@@ -80,8 +80,8 @@ Now each KDone GET API for `Game` model will have the desired output.
 ### Create
 Create DTO works opposite from read one: it is possible to specify the input model of create APIs, in order to control the JSON parameters of POST calls.
 
-Again let's take as example `Game` class define previously.
-We would like to let POST specify only parameter `name`.  
+Again let's take as an example `Game` class define previously.
+We would like to let POST specify only the parameter `name`.  
 
 To do this start creating a model
 ```kotlin
@@ -98,7 +98,7 @@ create<GameInput> {
 
 The rule is used to go from `GameInput` to `Game`.
 
-Like for read DTO, it is possible to omit the rule and let KDone perform an automatic transfer from `GameInput` to `Game` using classes attributes' names.
+Like for read DTO, it is possible to omit the rule and let KDone perform an automatic transfer from `GameInput` to `Game` using class attributes' names.
 
 Now the new POST supported body will be
 ```json
@@ -122,14 +122,14 @@ dto {
 }
 ```
 
-Now each PATCH API should have body like
+Now each PATCH API should have a body like
 ```
 {
    "name":"Days Gone"
 }
 ```
 
-## Role based DTO
+## Role-based DTO
 It is possible to configure DTO for each user role. This gives a more specific control on user's input and output.
 ```kotlin
 
