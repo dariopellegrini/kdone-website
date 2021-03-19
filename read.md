@@ -9,7 +9,7 @@ nav_order: 2
 
 Once configured a module for a model, GET API will be available via http requests.
 
-For instance take this model as example
+For instance, take this model as an example
 ```kotlin
 data class Game(
     val name: String,
@@ -53,7 +53,7 @@ To retrieve a single value call `games/:id`, i.e. `games/5e18372d9781db4d055afaf
 ```
 
 ## Queries
-Query are available using get parameters on model attributes.
+Queries are available using get parameters on model attributes.
 `games?players=1`.
 ```json
 [
