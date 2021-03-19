@@ -9,7 +9,7 @@ nav_order: 1
 
 Once configured a module for a model, POST API will be available via http requests.
 
-For instance take this model as example
+For instance, take this model as an example
 ```kotlin
 data class Game(
     val name: String,
@@ -52,10 +52,10 @@ Result
 ```
 
 The model has as attributes
-- name a non optional `String`
+- name a nonoptional `String`
 - players an optional `Ìnt`
 
-This means that in the body passed to the POST request `name`is mandatory and `players`is optional.  
+This means that in the body passed to the POST request `name` is mandatory and `players` is optional.  
 
 This is permitted
 ```json
