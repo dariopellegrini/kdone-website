@@ -7,7 +7,7 @@ has_children: true
 
 # Users
 
-In KDone users are a particular type of model. To create a model for user, inherit from `KDoneUser`.
+In KDone, users are a particular type of model. To create a user model, inherit from `KDoneUser`.
 
 ```kotlin
 data class User(override var username: String,
@@ -17,7 +17,7 @@ data class User(override var username: String,
                 val nickname: String)
 ```
 
-> Attribute `password`is optional cause other type of authentication other that username and password are supported.
+> Attribute `password` is optional cause other types of authentication other than username and password are supported.
 
 Inside `startKDone`function run
 ```kotlin
