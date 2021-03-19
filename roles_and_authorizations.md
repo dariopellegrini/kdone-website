@@ -7,19 +7,19 @@ nav_order: 2
 
 # Roles and Authorizations
 
-A model which inherits from `KDoneUser` has a `role` attribute that represents user's role.  
+A model which inherits from `KDoneUser` has a `role` attribute that represents the user's role.  
 Using roles it's possible to manage different authorization levels on each model or user.
 
 ## Model authorization
 
-Authorization are configure inside `module` DSL.  
+Authorization is configured inside `module` DSL.  
 There are different types of permissions: `create`, `read`, `update` and `delete`.  
-Roles can be customise and are represented by the `role` attribute in user model. Other than those, there are 3 standard roles:
+Roles can be customised and are represented by the `role` attribute in user model. Other than those, there are 3 standard roles:
 - `guest` represents the user not authenticated.
 - `registered` represents the generic authenticated user, without a specific role.
 - `owner` represent the owner of the resource.
 
-In code authorizations are configured using a proper DSL
+In code, authorizations are configured using a proper DSL
 
 ```kotlin
 module<Game>("games") {
@@ -38,10 +38,10 @@ module<Game>("games") {
 }
 ```
 
-If authorizations are configured, each API request will be checked thought Bearer Authentication token. If authorization check is passed, the API call is performed normally. Otherwise a `401 Unauthorized` error will be thrown.
+If authorizations are configured, each API request will be checked through Bearer Authentication token. If an authorization check is passed, the API call is performed normally. Otherwise, a `401 Unauthorized` error will be thrown.
 
 ## User authorization
-User authorization works similarly to model authorization and, in addiction, needs for options that rules users' action upon other users. This is done using DSL as well.
+User authorization works similarly to model authorization and, in addition, needs for options that rule users' action upon other users. This is done using DSL as well.
 
 ```kotlin
 userModule<User> {
@@ -71,4 +71,4 @@ userModule<User> {
 }
 ```
 
-If authorizations are configured, each user API request will be checked thought Bearer Authentication token. If authorization check is passed, the API call is performed normally. Otherwise a `401 Unauthorized` error will be thrown.
+If authorizations are configured, each user API request will be checked through Bearer Authentication token. If an authorization check is passed, the API call is performed normally. Otherwise, a `401 Unauthorized` error will be thrown.
