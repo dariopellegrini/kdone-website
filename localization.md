@@ -43,7 +43,7 @@ Read API will then return the localized object
 }
 ```
 
-Then if read API request has `Accept-Language` header with one of the available language code, the API will respond with a normal string with the selected language.
+Then if read API request has `Accept-Language` header with one of the available language codes, the API will respond with a normal string with the selected language.
 
 - `Accept-Language: en`
 ```json
