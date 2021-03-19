@@ -9,7 +9,7 @@ nav_order: 3
 
 Once configured a module for a model, PATCH API will be available via http requests.
 
-For instance take this model as example
+For instance, take this model as an example
 ```kotlin
 data class Game(
     val name: String,
