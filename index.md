@@ -2,7 +2,7 @@
 layout: default
 title: KDone
 nav_order: 1
-description: "Welcome in KDone"
+description: "Welcome to KDone"
 permalink: /
 ---
 
@@ -42,7 +42,7 @@ implementation 'com.github.dariopellegrini:KDone:v0.6.11'
 ```
 
 ### Configuration
- The simplest KDone configuration needs a model to represent database's data. It is suggested that this model inherits from Identifiable class, in order to have automatically managed MongoDB _id property.
+ The simplest KDone configuration needs a model to represent the database's data. It is suggested that this model inherits from Identifiable class, to have automatically managed MongoDB _id property.
 
 ```kotlin
 data class Game(
@@ -50,9 +50,9 @@ data class Game(
     val players: Int?): Identifiable()
 ```
 
-Then using DSL the configuration of CRUD API is pretty straight forward.  
-In main, call startKDone function, passing as arguments the desired port, mongo URL and a configuration for JWT with the secret used for token signature.  
-Finally with DSL approach declare a module with model class and its endpoint.
+Then using DSL the configuration of CRUD API is pretty straightforward.  
+In main, call startKDone function, passing as arguments the desired port, mongo URL and a configuration for JWT with the secret used for the token signature.  
+Finally with DSL approach declare a module with a model class and its endpoint.
 
 ```kotlin
 startKDone(
@@ -67,7 +67,7 @@ startKDone(
 
 This configuration will give CRUD API at `games` endpoint
 
-- POST `http://localhost:23146/games` performs creation of a new game
+- POST `http://localhost:23146/games` performs the creation of a new game
 - GET `http://localhost:23146/games` returns the list of all games
 - GET `http://localhost:23146/games/:id` returns the game with the specified id
 - PATCH `http://localhost:23146/games/:id` performs an update on the game with the specified id
