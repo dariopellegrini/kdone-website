@@ -15,7 +15,7 @@ data class Poi(val name: String,
 ```
 
 This will add a `Geolocation` attribute to API requests.  
-Body will be made like that
+The body will be made like that
 ```json
 {
    "name":"McDonald's",
