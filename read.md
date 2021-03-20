@@ -99,7 +99,7 @@ The most common use case is to add in a document of a collection a reference to 
 
 Lookup is supported using `Lookup` annotation.  
 
-These models `Game` referrs `Platform` through its `Id`.
+In these models `Game` referrs `Platform` through its `Id`.
 ```kotlin
 data class Game(val name: String, val platformId: Id<Platform>)
     
