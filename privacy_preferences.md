@@ -7,7 +7,7 @@ nav_order: 8
 
 # Privacy preferences
 
-KDone lets to configure privacy consents that users can compile, read and update,
+KDone lets to configure privacy consents that users can compile, read and update.
 
 ### Paragraphs
 Privacy contents are made by paragraphs. Each paragraph can represent just text or a possible selection for the user, typically to express consent on a privacy aspect (i.e. terms and conditions consent).  
