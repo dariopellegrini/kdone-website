@@ -45,7 +45,7 @@ emailConfirmation(
 This configuration will send an e-mail after user signup, using username as the e-mail address.
 The e-mail will contain a link like `https://site.com/users/auth/veryfy/<code>`, that, when opened, will confirm the user's e-mail address.
 
-By default, the e-mail confirmation is not mandatory to let users perform the login. It can be configured as mandatory in `userModule` DSL.
+By default the e-mail confirmation is not mandatory to let users perform the login. It can be configured as mandatory in `userModule` DSL.
 
 ```kotlin
 needsEmailConfirmation = true
