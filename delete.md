@@ -21,7 +21,7 @@ Configure the module it's simply done by adding inside startKDone DSL
 module<Game>("games")
 ```
 
-To delete a document, call the endpoint `games/:id`using a DELETE request.
+To delete a document call the endpoint `games/:id`using a DELETE request.
 
 Endpoint
 ```
