@@ -7,7 +7,7 @@ nav_order: 8
 # Data Transfer Object (DTO)
 
 KDone supports DTO pattern, which allows controlling API's input and output data. It is possible to specify the output model of reading operations and the input model of creating and update operations.
-To configure DTO, add `dto` inside `module` configuration DSL
+To configure DTO add `dto` inside `module` configuration DSL
 
 ```kotlin
 module<Game>("games") {
