@@ -99,7 +99,46 @@ routing {
 ## Converting data
 In KDone, models represent the documents saved on MongoDB. It can be useful to convert them easily into another model to deal with permission, different views and so on.  
 KDone has the `tranfer` function, that can turn a model into another.  
-Let's take a basic `Game` model.
+Let's take a `User` model.
 
 ```kotlin
+data class User(override var username: String,
+                val name: String,
+                val surname: String,
+                val nickname: String,
+                val image: ResourceFile?,
+                val active: Boolean?,
+                val score: Double?,
+                val gameId: Id<Game>?,
+                val date: Date?,
+                val location: GeoLocation?) : KDoneUser(
+```
+
+Then a public version of it.
+
+```kotlin
+data class PublicUser(val username: String,
+                val name: String,
+                val surname: String,
+                val nickname: String,
+                val image: ResourceFile?)
+```
+
+Using `transfer` function is possible to convert the first into the second.
+
+```kotlin
+val user = usersRepository.findAll().first()
+
+// New model created manually
+val publicUser = user.transfer<User, PublicUser> {
+        _, currentUser ->
+                PublicUser(currentUser.username,
+                        currentUser.name,
+                        currentUser.surname,
+                        currentUser.nickname,
+                        currentUser.image)
+      }
+
+// New model created automatically, resolving attributes with the same names
+val publicUser: PublicUser = user.transfer()
 ```
