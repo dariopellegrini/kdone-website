@@ -8,7 +8,7 @@ nav_order: 10
 
 KDone let to add custom routes, giving developers some helper function to interact easily with KDone structure, such as database or authentication.
 
-## Adding custom route
+## Adding custom routes
 The most simple thing that can be done is add a route with a custom code. KDone is on top of [Ktor](https://ktor.io), so routes are implemented using Ktor DSL. They can be added inside `module` closure or outside it, inside `startKDone` closure.
 
 ```kotlin
@@ -33,7 +33,7 @@ startKDone(
 ```
 
 ## Using authentication
-Custom routes can be authenticated using `authenticateJWT` function. Inside that the authenticated data of a user can be retreived with `userAuth` function.
+Custom routes can be authenticated using `authenticateJWT` function. Inside that the authenticated data of a user can be retrieved with `userAuth` function.
 
 ```kotlin
 authenticateJWT {
@@ -54,10 +54,10 @@ authenticateJWT(optional = true) {
 }
 ```
 
-## Using repository
-In order to access database, KDone offers a couple of ways to use repositories connected to MongoDB.  
-Each model has a repository that let to access MongoDB query on its collection, through [KMongo](https://litote.org/kmongo) API.
-To access repository in `module` closure, just use `repository` instance available in configuration closure.
+## Using repositories
+In order to access the database, KDone offers a couple of ways to use repositories connected to MongoDB.  
+Each model has a repository that lets to access MongoDB query on its collection, through [KMongo](https://litote.org/kmongo) API.
+To access the repository in `module` closure, just use `repository` instance available in configuration closure.
 
 ```kotlin
 module<Game>("games") {
@@ -68,7 +68,7 @@ module<Game>("games") {
 }
 ```
 
-To access repository outside `module` closure, KDone has a `Route` extension that can be used inside `startKDone` function or inside every Ktor `routing`.
+To access the repository outside `module` closure, KDone has a `Route` extension that can be used inside `startKDone` function or inside every Ktor `routing`.
 
 ```kotlin
 startKDone(
@@ -98,7 +98,7 @@ routing {
 
 ## Converting data
 In KDone, models represent the documents saved on MongoDB. It can be useful to convert them easily into another model to deal with permission, different views and so on.  
-KDone has the `tranfer` function, that can turn a model into another.  
+KDone has the `transfer` function, that can turn a model into another.  
 Let's take a `User` model.
 
 ```kotlin
