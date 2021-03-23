@@ -6,7 +6,7 @@ nav_order: 10
 
 # Custom routes
 
-KDone let to add custom routes, giving developers some helper function to interact easily with KDone structure, such as authentication or database.
+KDone lets to add custom routes, giving developers some helper function to interact easily with KDone structure, such as authentication or database.
 
 ## Adding custom routes
 The most simple thing that can be done is add a route with a custom code. KDone is on top of <a href="https://ktor.io" target="_blank">Ktor</a>, so routes are implemented using Ktor DSL. They can be added inside `module` closure or outside it, inside `startKDone` closure.
