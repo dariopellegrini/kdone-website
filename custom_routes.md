@@ -56,7 +56,7 @@ authenticateJWT(optional = true) {
 
 ## Using repositories
 In order to access the database, KDone offers a couple of ways to use repositories connected to MongoDB.  
-Each model has a repository that lets to access MongoDB query on its collection, through [KMongo](https://litote.org/kmongo) API.
+Each model has a repository that lets to access MongoDB query on its collection, through <a href="https://litote.org/kmongo" target="_blank">KMongo</a> API.
 To access the repository in `module` closure, just use `repository` instance available in configuration closure.
 
 ```kotlin
