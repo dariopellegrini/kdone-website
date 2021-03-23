@@ -124,7 +124,7 @@ data class PublicUser(val username: String,
                 val image: ResourceFile?)
 ```
 
-Using `transfer` function is possible to convert the first into the second.
+Using `transfer` function it's possible to convert the first into the second.
 
 ```kotlin
 val user = usersRepository.findAll().first()
