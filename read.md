@@ -94,7 +94,7 @@ For example `games?_query={$or:[{players:1}, {players:7}]}`.
 ```
 
 ## Lookup
-In MongoDB join between collection are not possible. In their place, there is lookup operator, that let to add an element of other collection referencing them through field names.  
+In MongoDB joins between collections are not possible. In their place, there is lookup operator, that lets to add an element of other collection referencing them through field names.  
 The most common use case is to add in a document of a collection a reference to one or more id of another collection and then perform lookup, to integrate the referenced document of the second collection into the queries' results of the first one.
 
 Lookup is supported using `Lookup` annotation.  
