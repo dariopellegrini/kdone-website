@@ -7,7 +7,7 @@ permalink: /
 ---
 
 # Welcome to KDone website
-KDone is a configurator that lets to implement RESTful API very easily. It is on top of Ktor framework and uses its core principles like functional programming and DSL.
+KDone is a configurator that lets to implement RESTful API very easily. It is on top of <a href="https://ktor.io" target="_blank">Ktor</a> framework and uses its core principles like functional programming and DSL.
 
 ## Getting started
 ### Installation
