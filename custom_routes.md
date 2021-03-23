@@ -97,7 +97,7 @@ routing {
 ```
 
 ## Converting data
-In KDone, models represent the documents saved on MongoDB. It can be useful to convert them easily into another model to deal with permission, different views and so on.  
+In KDone, models represent the documents saved in MongoDB. It can be useful to convert them easily into another model to deal with permission or different views.  
 KDone has the `transfer` function, that can turn a model into another.  
 Let's take a `User` model.
 
