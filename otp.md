@@ -59,7 +59,7 @@ KDone has a build-in Email sender to send OTP codes through e-mail. It takes as 
 val otpSender = EmailSender<User>(smtpClient, "Info" to "info@company.com", "One Time Password") {
                     code ->
                 """
-                    Il codice di conferma per accedere è
+                    Your requested access code is
                     $code
                 """.trimIndent()
             }
