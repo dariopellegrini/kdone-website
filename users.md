@@ -14,7 +14,7 @@ data class User(override var username: String,
                 override var password: String?,
                 val name: String,
                 val surname: String,
-                val nickname: String)
+                val nickname: String): KDoneUser()
 ```
 
 > Attribute `password` is optional cause other types of authentication other than username and password are supported.
