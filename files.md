@@ -31,7 +31,7 @@ This interface has 2 methods
 1. `suspend fun save(modelName: String, fileName: String, file: File, contentType: String): String?`  
 It is intended to add to the storage the uploaded file and it gets as input document's model name, file name, actual `File` object and content-type. As return value, it should have the file string URL.
 2. `suspend fun delete(url: String)`  
-It gets as input the file url and it is intended to delete that file to the storage.
+It gets as input the file url and it is intended to delete that file from the storage.
 
 ### S3 uploader
 S3 is a popular file container and strage system, used in a large amount of backends.  
