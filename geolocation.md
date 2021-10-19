@@ -4,9 +4,9 @@ title: Geolocation
 nav_order: 6
 ---
 
-# Geolocation
+# GeoLocation
 
-Adding `Geolocation` attribute to a model enables Geo queries through `_query` parameter inside a `GET` request.
+Adding `GeoLocation` attribute to a model enables Geo queries through `_query` parameter inside a `GET` request.
 
 ```kotlin
 data class Poi(val name: String,
@@ -14,7 +14,7 @@ data class Poi(val name: String,
                val location: GeoLocation)
 ```
 
-This will add a `Geolocation` attribute to API requests.  
+This will add a `GeoLocation` attribute to API requests.  
 The body will be made like that
 ```json
 {
